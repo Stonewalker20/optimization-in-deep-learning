@@ -1,74 +1,99 @@
-# Optimization in Deep Learning: Learning Rates, Stability, and Drift
+# Optimization in Deep Learning  
+**Learning Rates, Stability, Generalization, and Drift**
 
-![Optimization Experiments](assets/preview.png)
-![Optimization Experiments](assets/preview1.png)
-![Optimization Experiments](assets/preview2.png)
-![Optimization Experiments](assets/preview3.png)
-![Optimization Experiments](assets/preview4.png)
+This repository contains a focused set of experiments exploring how optimization
+choices affect machine learning models in practice.
 
+Rather than tuning architectures or chasing marginal accuracy gains, this work
+looks at the **mechanics of training itself** — learning rates, optimizers,
+schedules, and what happens when real-world assumptions break.
 
-This notebook explores how optimization choices directly affect training stability,
-generalization, and real-world performance in machine learning models.
-
-Rather than focusing on model architecture alone, the goal here is to understand
-**how learning rate selection, optimizer choice, and scheduling strategies influence
-both convex and non-convex optimization problems**.
+The notebook is fully executed and answered, with results interpreted directly
+from the observed behavior.
 
 ---
 
-## What This Notebook Covers
+## 🔬 What’s Inside
 
-- Logistic Regression on a convex loss surface
-- Multi-Layer Perceptron (MLP) training on a non-convex loss
-- Effects of learning rate magnitude on convergence and stability
-- SGD vs Adam behavior under identical conditions
-- Constant vs decaying learning rate schedules
-- Overfitting and generalization gaps
-- Concept drift and post-deployment performance degradation
+The experiments cover both theory-aligned and real-world scenarios:
 
-All experiments are backed by quantitative results and visualizations.
+- Convex optimization using Logistic Regression  
+- Non-convex optimization using a small MLP  
+- Learning rate magnitude and convergence behavior  
+- SGD vs Adam under identical conditions  
+- Constant vs decaying learning rate schedules  
+- Overfitting and generalization gaps  
+- Concept drift and post-deployment accuracy loss  
 
----
-
-## Key Takeaways
-
-- Even convex problems can fail to converge with poor learning rate selection
-- Non-convex optimization is highly sensitive to optimizer choice
-- Adam converges more consistently than SGD under the same constraints
-- High training accuracy does not imply strong generalization
-- Data distribution drift can significantly reduce accuracy without any model changes
-
-This reinforces why **training metrics alone are not sufficient** and why
-monitoring and retraining strategies are critical in deployed systems.
+Each section pairs visual results with written analysis.
 
 ---
 
-## Why This Matters
+## 📊 Visual Highlights
 
-These experiments reflect real challenges faced in production ML systems:
-models can appear to perform well during training and validation,
-yet degrade over time due to optimization instability or changing data.
+Below are selected snapshots from the experiments to give a quick sense of
+what’s being explored.
 
-Understanding these dynamics is essential for building **robust, maintainable ML pipelines**.
+### Learning Rate Effects (Convex)
+![Convex LR Comparison](assets/preview1.png)
 
----
+### Optimizer Stability (Non-Convex)
+![Optimizer Comparison](assets/preview2.png)
 
-## Tools & Frameworks
+### Training vs Test Accuracy
+![Generalization Gap](assets/preview3.png)
 
-- Python
-- PyTorch
-- NumPy
-- Matplotlib
+### Learning Rate Scheduling
+![LR Schedules](assets/preview4.png)
 
----
-
-## File
-
-- `learning_rate_optimization.ipynb`
+### Concept Drift Impact
+![Concept Drift](assets/preview5.png)
 
 ---
 
-## Author
+## 📈 Key Observations
 
-Cordell Stonecipher  
-AI / Machine Learning | Optimization & Training Dynamics
+- Convex loss functions can still fail to converge with poor learning rates  
+- Non-convex optimization is highly sensitive to optimizer choice  
+- Adam converges more consistently than SGD in unstable regions  
+- Training accuracy alone is a weak indicator of real performance  
+- Data distribution drift can significantly reduce accuracy without code changes  
+
+These behaviors mirror what happens in production ML systems.
+
+---
+
+## 🧠 Why This Matters
+
+In real deployments, models don’t fail because the architecture is wrong —
+they fail because assumptions break.
+
+This notebook highlights why:
+- optimization choices matter as much as model design  
+- monitoring is required after deployment  
+- retraining decisions must be data-driven  
+
+Understanding these dynamics is essential for building reliable ML systems.
+
+---
+
+## 🛠️ Tools Used
+
+- Python  
+- PyTorch  
+- NumPy  
+- Matplotlib  
+
+---
+
+## 📁 Files
+
+- `learning_rate_optimization.ipynb`  
+
+---
+
+## 👤 Author
+
+**Cordell Stonecipher**  
+AI / Machine Learning  
+Focus: optimization behavior, training dynamics, and model reliability
