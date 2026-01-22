@@ -1,5 +1,12 @@
 # Optimization in Deep Learning: Learning Rates, Stability, and Drift
 
+![Optimization Experiments](assets/preview.png)
+![Optimization Experiments](assets/preview1.png)
+![Optimization Experiments](assets/preview2.png)
+![Optimization Experiments](assets/preview3.png)
+![Optimization Experiments](assets/preview4.png)
+
+
 This notebook explores how optimization choices directly affect training stability,
 generalization, and real-world performance in machine learning models.
 
