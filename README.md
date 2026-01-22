@@ -35,19 +35,19 @@ Below are selected snapshots from the experiments to give a quick sense of
 what’s being explored.
 
 ### Learning Rate Effects (Convex)
-![Convex LR Comparison](assets/preview1.png)
+![Convex LR Comparison](assets/preview.png)
 
 ### Optimizer Stability (Non-Convex)
-![Optimizer Comparison](assets/preview2.png)
+![Optimizer Comparison](assets/preview1.png)
 
 ### Training vs Test Accuracy
-![Generalization Gap](assets/preview3.png)
+![Generalization Gap](assets/preview2.png)
 
 ### Learning Rate Scheduling
-![LR Schedules](assets/preview4.png)
+![LR Schedules](assets/preview3.png)
 
 ### Concept Drift Impact
-![Concept Drift](assets/preview5.png)
+![Concept Drift](assets/preview4.png)
 
 ---
 
